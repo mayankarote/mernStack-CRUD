@@ -19,31 +19,52 @@ const StudentForm = (props) => {
     <div className="form-wrapper">
       <Formik {...props} validationSchema={validationSchema}>
         <Form>
-          <FormGroup>
-            <Field name="name" type="text" className="form-control" />
+          <FormGroup style={{ margin: 20 }}>
+            <Field
+              name="name"
+              type="text"
+              className="form-control"
+              placeholder="Name"
+            />
             <ErrorMessage
               name="name"
               className="d-block invalid-feedback"
               component="span"
             />
           </FormGroup>
-          <FormGroup>
-            <Field name="email" type="text" className="form-control" />
+          <FormGroup style={{ margin: 20 }}>
+            <Field
+              name="email"
+              type="text"
+              className="form-control"
+              placeholder="Email"
+            />
             <ErrorMessage
               name="email"
               className="d-block invalid-feedback"
               component="span"
             />
           </FormGroup>
-          <FormGroup>
-            <Field name="rollno" type="number" className="form-control" />
+          <FormGroup style={{ margin: 20 }}>
+            <Field
+              name="rollno"
+              type="number"
+              className="form-control"
+              placeholder="Roll No"
+            />
             <ErrorMessage
               name="rollno"
               className="d-block invalid-feedback"
               component="span"
             />
           </FormGroup>
-          <Button variant="danger" size="lg" block="block" type="submit">
+          <Button
+            variant="danger"
+            size="lg"
+            block="block"
+            type="submit"
+            style={{ margin: 20 }}
+          >
             {props.children}
           </Button>
         </Form>
